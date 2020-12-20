@@ -4,7 +4,7 @@ import json
 import numpy as np
 from flask import Flask, request, jsonify,render_template,request,url_for,redirect
 
-app = Flask(__name__,static_url_path='/static')
+app = Flask(__name__,static_url_path='')
 
 __locations = None
 __data_columns = None
@@ -47,7 +47,7 @@ def load_saved_artifacts():
 @app.route('/')
 @app.route("/home")
 def home():
-    return render_template('index.html')
+    return app.send_static_file('index.html')
 
 @app.route('/predict_home_price', methods=['GET', 'POST'])
 def predict_home_price():
