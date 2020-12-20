@@ -4,7 +4,7 @@ import json
 import numpy as np
 from flask import Flask, request, jsonify,render_template,request,url_for,redirect
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 __locations = None
 __data_columns = None
