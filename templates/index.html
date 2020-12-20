@@ -3,6 +3,8 @@
 <head>
     <title>Banglore Home Price Prediction</title>
 	<link rel="stylesheet" href={{url_for('static',filename="app.css")}}>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{url_for('static',src='static/app.js')}}"><</script>
 </head>
 <body>
 <div class="img"></div>
@@ -47,7 +49,5 @@
 </div>
 	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
 	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{url_for('static',filename='app.js')}}"><</script>
 </body>
 </html>
